@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <title>Gerenciamento de Vendas</title>
+</head>
+
+<body class="bg-secondary">
+    <div class="container bg-white">
+        <div class='row mt-4'>
+            <div class="col-md-12">
+                <a href='../index.html' class='d-none btn-index'></a>
+                <div class='alert alert-danger d-none'>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <form id="produto-form" class='mt-4'>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nome">Descrição</label>
+                        <input type="text" class="form-control" id="descricao" name="descricao"
+                            placeholder="Insira a descrição">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="cpf">Quantidade Estoque</label>
+                        <input type="number" class="form-control" id="quantidade" name="quantidade"
+                            placeholder="Insira a quantidade no estoque">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="cpf">Preço</label>
+                        <input type="text" class="form-control valor" id="preco" name="preco"
+                            placeholder="Insira o preço">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="cpf">Desconto máximo por unidade</label>
+                        <input type="text" class="form-control valor" id="desconto" name="desconto"
+                            placeholder="Insira o desconto">
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-success mb-4 gravar-produto">Gravar Produto</button>
+        </form>
+
+    </div>
+</body>
+
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/maskMoney.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/produto/produto.js"></script>
+
+</html>

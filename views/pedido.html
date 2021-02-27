@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <title>Gerenciamento de Vendas</title>
+</head>
+
+<body class="bg-secondary">
+    <div class="container bg-white">
+        <div class='row mt-4'>
+            <div class="col-md-12">
+                <a href='../index.html' class='d-none btn-index'></a>
+                <a href='venda.html' class='d-none btn-venda'></a>
+                <div class='alert alert-danger alert-form d-none' id="erro">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <form id="pedido-form" class='mt-4'>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="cliente">Cliente</label>
+                        <select class="form-control" id="cliente" name="cliente">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="lead">Produtos</p>
+            <div class="row mb-4" id="produtos"></div>
+            <hr>
+            <p class="lead"> Produtos Adicionados</p>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Desconto</th>
+                    </tr>
+                </thead>
+                <tbody class='produtos-adicionados'>
+
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-success mb-4 finalizar-venda">Finalizar Venda</button>
+            <div class="modal-produto modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title titulo-produto">Titulo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class='row mt-4'>
+                                <div class="col-md-12">
+                                    <div class='alert alert-danger alert-modal d-none'>
+                                        <ul></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="hidden" id="produto-id" value="">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="nome">Quantidade</label>
+                                        <input type="number" class="form-control" id="quantidade" name="quantidade"
+                                            placeholder="Insira a quantidade">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="nome">Desconto Unitário</label>
+                                        <input type="text" class="form-control valor" id="desconto" name="desconto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary adicionar-produto">Adicionar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/maskMoney.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/pedido/pedido.js"></script>
+
+</html>
